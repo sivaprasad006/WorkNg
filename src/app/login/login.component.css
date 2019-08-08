@@ -1,0 +1,16 @@
+.loginclass{
+    display: flex;   
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: fixed;
+    align-items: center;    
+    width: 100%;
+    height: 100%;
+}
+.c1{
+    padding-top: 20px;
+}
+.l1{
+    margin-right: 15px;
+}

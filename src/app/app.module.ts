@@ -7,18 +7,26 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 
+import { appconstants } from './globalsConstants';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
     LoginComponent
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [appconstants],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
