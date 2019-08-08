@@ -11,23 +11,21 @@ import { UserserviceService } from '../services/userservice.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(public appconstants: appconstants,public router:Router, public Userservice:UserserviceService) { }
-  
+  username: '';
+  password: '';
+  userdata: any = [];
+
+  constructor(public router: Router, public Userservice: UserserviceService) { }
+
   // role = this.appconstants.role;
-  ngOnInit() {  }
-  username : '';
-  password : '';
-  userdata:any = [];
+  ngOnInit() { }
 
-  login(){     
-    this.username;
-    this.password;
-     return this.Userservice.getUserinfo(this.username,this.password).subscribe((data: {}) => { 
-       this.userdata = data;          
-    if(this.userdata && this.userdata.User_ID > 0){
-      this.router.navigate(['/header']);
-    }               
-    })     
+  login() {
+    return this.Userservice.getUserinfo(this.username, this.password).subscribe((data: {}) => {
+      this.userdata = data;
+      if (this.userdata && this.userdata.User_ID > 0) {
+        this.router.navigate(['/header']);
+      }
+    });
   }
-
 }
