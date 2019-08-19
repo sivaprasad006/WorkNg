@@ -18,7 +18,6 @@ ng > npm install through this command getting Node modules.
 ng > ng serve checking application
 <br>
 
-
 //code updated in git url
 <br>
 
@@ -52,7 +51,14 @@ ng > import that seervice in login component
 <br>
 ng > create one function for login click and pass the user details to services
 <br>
-
+ng > create one model file (ng g class models/user)
+<br>
+ng > using user model to bind username and password and send requests.
+<br>
+ng > import router in app.component.ts and respective app.component.html changes for hide and show handling.
+<br>
+ng > install ngx-toastr for toast messages and animations also
+<br>
 
 
 

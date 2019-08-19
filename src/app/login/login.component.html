@@ -1,13 +1,13 @@
 <div class="loginclass">
-<div class="c1">
-<label class="l1">Username</label>
-<input  type="text" [(ngModel)]="username"  placeholder="UserName"/>
-</div>
-<div class="c1">
-<label class="l1">Password</label>
-<input  type="password" [(ngModel)]="password"  placeholder="Password"/>
-</div>
-<div class="c1" >
-  <button (click)="login()">Login</button>
-</div>
+    <div class="c1">
+        <label class="l1">Username</label>
+        <input type="text" [(ngModel)]="usermodel.username" placeholder="UserName" />
+    </div>
+    <div class="c1">
+        <label class="l1">Password</label>
+        <input type="password" [(ngModel)]="usermodel.password" placeholder="Password" />
+    </div>
+    <div class="c1">
+        <button (click)="login()">Login</button>
+    </div>
 </div>

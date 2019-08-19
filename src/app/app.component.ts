@@ -7,9 +7,5 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // title = 'workNG';
-  router: string;
-  constructor(private _router: Router) {
-    this.router = _router.url;
-  }
+  constructor(private router: Router) { }
 }

@@ -9,16 +9,16 @@ import { Observable, throwError } from 'rxjs';
 })
 export class UserserviceService {
 
-  constructor(public http:HttpClient) { }
-  apiURL = "http://localhost:59381/api/";
+  constructor(public http: HttpClient) { }
+  apiURL = 'http://localhost:59381/api/';
 
    // Http Options
    httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
-  }
-  getUserinfo(uname,pwd)  {
-    return this.http.get(this.apiURL +"User/"+ uname + "/" + pwd)
+  };
+  getUserinfo(User)  {
+    return this.http.get(this.apiURL + 'User/' + User.username + '/' + User.password);
   }
 }

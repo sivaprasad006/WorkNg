@@ -1,0 +1,14 @@
+.footer {
+    background: #2e3440;
+    height: 40px;
+    text-align: center;
+}
+
+.footer span {
+    text-align: center;
+    display: inline-block;
+    width: 30%;
+    color: #9c9c9c;
+    line-height: 40px;
+    font-size: 12px;
+}

@@ -1,7 +1,6 @@
 .loginclass{
     display: flex;   
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-direction: column;    
     justify-content: center;
     position: fixed;
     align-items: center;    

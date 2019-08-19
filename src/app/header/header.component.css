@@ -1,3 +1,25 @@
-.lgout{
+.lgout {
     float: right;
+}
+
+.hdr {
+    height: 60px;
+    text-align: center;
+    background-color: #46423d;
+}
+
+.logo {
+    color: #fff;
+    font-size: 26px;
+    padding: 17px 0px;
+    padding-left: 5px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.s1 {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 3px
 }

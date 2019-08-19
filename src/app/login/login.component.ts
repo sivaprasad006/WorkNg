@@ -1,8 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { appconstants } from '../globalsConstants';
+import { Appconstants } from '../globalsConstants';
 import { Router } from '@angular/router';
 import { UserserviceService } from '../services/userservice.service';
-
+import { User } from '../models/user';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -11,20 +12,23 @@ import { UserserviceService } from '../services/userservice.service';
 })
 export class LoginComponent implements OnInit {
 
-  username: '';
-  password: '';
+  // username: '';
+  // password: '';
   userdata: any = [];
+  usermodel = new User();
 
-  constructor(public router: Router, public Userservice: UserserviceService) { }
+  constructor(public router: Router, public Userservice: UserserviceService, private toastr: ToastrService) { }
 
   // role = this.appconstants.role;
   ngOnInit() { }
 
   login() {
-    return this.Userservice.getUserinfo(this.username, this.password).subscribe((data: {}) => {
+    return this.Userservice.getUserinfo(this.usermodel).subscribe((data: {}) => {
       this.userdata = data;
       if (this.userdata && this.userdata.User_ID > 0) {
-        this.router.navigate(['/header']);
+        this.router.navigate(['/dashboard']);
+      } else {
+        this.toastr.error('Please Enter Valid Credentials');
       }
     });
   }
