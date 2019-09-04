@@ -8,17 +8,17 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'login',
-    pathMatch: "full"
+    pathMatch: 'full'
   },
   {
     path: 'login',
     component: LoginComponent
   },
-  //{ path:'**',redirectTo:'login',pathMatch:"full"},
+  // { path:'**',redirectTo:'login',pathMatch:"full"},
   {
     path: 'dashboard',
     component: DashboardComponent,
-    pathMatch: "full"
+    pathMatch: 'full'
   },
 ];
 

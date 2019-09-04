@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/dashboard']);
       } else {
         this.toastr.error('Please Enter Valid Credentials');
+        this.usermodel = new User();
       }
     });
   }
