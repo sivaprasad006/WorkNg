@@ -60,6 +60,6 @@ ng > import router in app.component.ts and respective app.component.html changes
 ng > install ngx-toastr for toast messages and animations also
 <br>
 
-
+ng > Added some serices in the project and push to git
 
 
