@@ -5,6 +5,7 @@ import { UserserviceService } from '../services/userservice.service';
 import { User } from '../models/user';
 import { ToastrService } from 'ngx-toastr';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -17,14 +18,16 @@ export class LoginComponent implements OnInit {
   userdata: any = [];
   usermodel = new User();
 
-  constructor(public router: Router, public Userservice: UserserviceService, private toastr: ToastrService) { }
-
-  // role = this.appconstants.role;
+  // tslint:disable-next-line:max-line-length
+  constructor(public router: Router, public Userservice: UserserviceService, private toastr: ToastrService, public appconstants: Appconstants) { }
   ngOnInit() { }
 
   login() {
+    this.appconstants.LoginFrom = 'true';
     return this.Userservice.getUserinfo(this.usermodel).subscribe((data: {}) => {
       this.userdata = data;
+      this.appconstants.UserInfoDetails = data;
+      window.sessionStorage.setItem('UserInfoDetails', JSON.stringify(data));
       if (this.userdata && this.userdata.User_ID > 0) {
         this.router.navigate(['/dashboard']);
       } else {

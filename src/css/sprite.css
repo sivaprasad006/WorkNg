@@ -1,0 +1,153 @@
+.vam-sprite{
+    background: url(../images/sprite.png) no-repeat;
+    position: relative;
+}
+.vam-xy-size24{
+    width:24px;
+    height: 24px;
+    display: inline-block;
+}
+.vam-xy-size22{
+    width:22px;
+    height: 22px;
+    display: inline-block;
+}
+
+.vam-xy-size16{
+    width:16px;
+    height: 16px;
+    display: inline-block;
+}
+/*.side-nav li a.active span{
+    background-position: -29px -32px;
+}*/
+
+.search-icon{
+    background-position: -8px -139px; /* edited by nazeer */
+}
+.preview-icon{
+    background-position: -8px -120px;
+}
+.edit-icon{
+    background-position: -8px -32px;
+}
+.edit-icon-white{
+    background-position: -36px -102px;
+}
+.lock-icon{
+    background-position: -8px -9px;
+}
+.copy-icon{
+    background-position: -8px -102px;
+}
+.download-icon{
+    background-position: -8px -56px;
+}
+.delete-icon{
+    background-position: -8px -79px;
+}
+.delete-icon-white{
+    background-position: -36px -122px;
+}
+.add-small-icon{
+    background-position: -8px -165px;
+}
+.magic-wand-icon {
+    background-position: -8px -198px;
+}
+.menu-icon {
+    background-position: -8px -182px;
+}
+.map-req-icon{
+    background-position: -33px -165px;
+}
+.export-icon{
+    background-position: -36px -191px;
+}
+.import-icon{
+    background-position: -36px -215px;
+}
+
+
+.scenario-icon{
+    background-position: -32px -32px;  
+}
+.constraint-icon{
+    background-position: -32px -8px;
+    top:3px
+}
+.constraint-small-icon {
+    background-position:-172px -8px;
+}
+.exclude-parameter-icon {
+    background-position: -152px -10px;
+}
+.generate-testcase-icon {
+    background-position:-201px -8px;
+}
+.screenshot-icon{
+    background-position: -32px -54px;
+    top:1px;
+}
+
+.largewindow-icon{
+    background-position: -33px -77px;
+    top: 1px;
+}
+
+
+.complex-parameter-icon{
+    background-position: -64px -9px;
+    top:1;
+}
+.tree-hierarchy-icon{
+    background-position: -106px -12px;
+    top:1;
+}
+.parameter-icon{
+    background-position: -64px -23px;
+    top:2px;
+    left:-5px;
+}
+/*.action-parameter-icon{
+    background-position: -64px -41px;
+    top:2px;
+    left:-5px;
+}*/
+.parameter1-icon{
+    background-position: -64px -23px;
+    top:3px;
+    left:-5px;
+}
+.action-parameter1-icon{
+    background-position: -64px -41px;
+    top:3px;
+    left:-5px;
+}
+.side-nav>li>ul>li>a.active span{
+    background-position-x: -19px;
+}
+.parameter-icon{
+    position: relative;
+    background: url("../images/parameter.png");
+    display: inline-block;
+    background-position: 0 0;
+}
+.action-parameter-icon{
+    position: relative;
+    background: url("../images/action-parameter-icon.png");
+    display: inline-block;
+    background-position: -0 -16px;
+    margin-right: 5px;
+    top:2px;
+}
+.check-icon{
+    width:32px;
+    height: 32px;
+    background-position: -64px -65px;
+    display: inline-block;
+    top:8px;
+}
+
+
+

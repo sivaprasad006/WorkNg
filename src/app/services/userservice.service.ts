@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
+import { Appconstants } from '../globalsConstants';
 
 // import 'rxjs/add/operator/toPromise';
 
@@ -9,8 +10,7 @@ import { Observable, throwError } from 'rxjs';
 })
 export class UserserviceService {
 
-  constructor(public http: HttpClient) { }
-  apiURL = 'http://localhost:59381/api/';
+  constructor(public http: HttpClient, public appconstants: Appconstants ) { }
 
    // Http Options
    httpOptions = {
@@ -19,6 +19,6 @@ export class UserserviceService {
     })
   };
   getUserinfo(User)  {
-    return this.http.get(this.apiURL + 'User/' + User.username + '/' + User.password);
+    return this.http.get(this.appconstants.apiURL + 'User/' + User.username + '/' + User.password);
   }
 }

@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Appconstants } from '../globalsConstants';
+import { ProjectService } from '../services/project.service';
+import { TestPlanService } from '../services/test-plan.service';
+
 
 @Component({
   selector: 'app-header',
@@ -7,12 +11,27 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor(public router:Router) { }
+  projectdata: any = [];
+  projects: any = [];
+  // tslint:disable-next-line:max-line-length
+  constructor(public router: Router, public projectService: ProjectService, public testplanservice: TestPlanService, public appconstants: Appconstants) { }
 
   ngOnInit() {
+    if (window.sessionStorage.UserInfoDetails != null) {
+      this.getProjects();
+    }
   }
-  logout(){
- this.router.navigate(['/login']);
+  logout() {
+    this.router.navigate(['/login']);
+  }
+  getProjects() {
+    this.projectdata = JSON.parse(window.sessionStorage.UserInfoDetails);
+    return this.projectService.GetallProjects(this.projectdata.ProjectIDs, this.projectdata.IsAdmin).subscribe((data: {}) => {
+       this.projects = data;
+       this.appconstants.ProjectDetails = data;
+    });
+  }
+  GetallTestPlans() {
+    return this.testplanservice.GetallTestPlans(this.projectdata.ProjectIDs);
   }
 }

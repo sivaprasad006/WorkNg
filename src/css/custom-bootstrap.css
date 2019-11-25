@@ -1,0 +1,386 @@
+.btn{
+    border-radius: 25px;
+    padding: 8px 20px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .3); /* edited by nazeer */
+    transition: all .5s;
+}
+.btn:focus, .btn:active{
+    outline:none !important;
+}
+.btn:hover{
+    box-shadow: none;
+}
+.btn-primary{
+    background-color: #fd7663;
+    border-color:#f3624e;
+    transition: all .5s;
+}
+.btn-succees{
+    background-color: #5dae6b;
+}
+.text-success{
+    color: #5dae6b;
+}
+.btn-danger{
+    background-color: #e24646;
+}
+
+.btn-info{
+    background-color: #1f8fbe;
+}
+
+
+.btn-primary:active, .btn-primary:focus, .btn-primary:hover , .btn-primary[disabled]:focus, .btn-primary[disabled]:hover{
+    background-color: #f3624e !important;
+    border-color:#f3624e !important;
+    outline: none  !important;;
+}
+.btn-secondary{
+    background-color: #46433e;
+    border-color:#423e39; /* edited by nazeer */
+    color:#fff;;
+}
+.btn-secondary:hover,.btn-secondary:active{
+    color: #fff;
+}
+/*################Drodown CSS Start Here################*/
+.dropdown .dropdown-menu{
+    padding:0;
+    border-radius: 0;
+    margin-left: -52px;
+    margin-top: 12px;
+    box-shadow: none;
+    z-index: 9999;
+}
+
+.dropdown ul li{
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    float:none;
+   border-bottom: 1px solid #ededed;
+}
+.dropdown ul li a{
+    padding:10px;
+    color: rgba(32, 31, 29, 0.85);
+}
+.dropdown ul li:last-child{
+    border: none;
+}
+.open > .dropdown-menu {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);  
+ }
+.dropdown-menu {
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    -webkit-animation-fill-mode: forwards;  
+    animation-fill-mode: forwards; 
+    -webkit-transform: scale(1, 0);
+    display: block;
+        transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+}
+.caret{
+    border-top: 6px dashed;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+}
+/*################Drodown CSS End Here################*/
+/*################Page Header CSS Start Here################*/
+.page-header{
+    margin: 0;
+    padding-bottom: 0;
+    color: #101f32;
+}
+.page-header h1{
+    display: inline-block;
+    padding: 20px 10px;
+}
+.page-header h2{
+    display: inline-block;
+    padding: 15px 15px;
+}
+.page-header ul{
+    float:right;
+    margin-bottom: 0;
+}  
+.page-header ul li{ 
+    float: left;
+    border-left:1px solid #e8e8e8; /* edited by nazeer */
+}
+/*################Page Header CSS End Here################*/ 
+
+/*################Accordian CSS Start Here################*/ 
+.panel-group {
+    background: #fff;
+    border-radius: 3px;
+    /*box-shadow: 0 5px 0px 0 rgba(0, 0, 0, 0.04);*/
+    border: none;
+}
+#accordion .panel {
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0 0 5px 0px;
+}
+#accordion .panel-heading {
+  
+    padding: 0;
+}
+#accordion .panel-title a, #module-acc .panel-title a {
+    background: #343434;
+    border: 1px solid transparent;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    padding: 12px 20px 12px 35px;
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+#accordion .panel-title a.collapsed, #module-acc .panel-title a.collapsed {
+    background: #eff0f0;
+    color: #201f1d;
+}
+#accordion .panel-title a::after, #accordion .panel-title a.collapsed::after, #module-acc .panel-title a::after, #module-acc .panel-title a.collapsed::after {
+    border: 1px solid transparent;
+    color: #fff;
+    content: "";
+    font-family: fontawesome;
+    font-size: 24px;
+    font-weight: 400;
+    left: 10px;
+    position: absolute;
+    top: 3px;
+    transition: all 0.3s ease 0s;
+}
+#accordion .panel-title a.collapsed::after, #module-acc .panel-title a.collapsed::after{
+    box-shadow: none;
+    color: #333;
+    /*content: "";*/
+    transform: rotate(-90deg);
+}
+#accordion .panel-title a .test-cases-count{
+    float: right;
+    font-weight: 400;
+    margin-top:10px;
+}
+#accordion .panel-title a.collapsed .test-cases-count span{
+    background-color: #dedede;
+    color: #201f1d;
+}
+#accordion .panel-title a .test-cases-count span{
+    background-color: #f3624e;
+   color: #ffffff;
+   padding: 3px 10px;
+   border-radius: 15px;
+    position: relative;
+    top: -1px;
+    font-weight: 500;
+}
+#accordion .panel-body {
+    background: transparent none repeat scroll 0 0;
+    border-top: medium none;
+    padding: 20px;
+    position: relative;
+}
+/*################Accordian CSS Start Here################*/ 
+/*################Table CSS Start Here################*/ 
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+    padding: 12px;
+}
+.table>thead>tr>th{
+    font-weight:400 !important;
+}
+.table>tbody>tr>td{
+    color: #545454;
+}
+.table>tbody>tr>td .add-icon a{
+    padding: 0px;
+    margin-top: 7px; /* added by nazeer */
+    margin-right: 0;
+	font-size: 14px; /* added by nazeer */
+}
+/*################Table CSS End Here################*/ 
+/*################Navigation CSS Start Here################*/ 
+.navbar{ 
+    border: none;
+    border-bottom: 1px solid #e8e8e8; /* edited by nazeer */
+    min-height: 40px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.12); /* edited by nazeer */
+    position: relative;
+    z-index: 99;
+}
+.navbar .navbar-nav li a{
+    color:#101f32 !important;
+    padding:12px 25px;
+    font-weight: 500;
+    font-size: 14px; /* edited by nazeer */
+}
+.navbar .navbar-nav li a.active{
+    /*background-color: #fd7663;*/
+    border-bottom: 2px solid #fd7663;
+    color: #fd7663 !important;
+}
+.navbar-default .navbar-toggle .icon-bar{
+    background-color: #ffffff;
+    width: 24px;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+    background-color: #fd7663;
+}
+.navbar-brand{
+    color: #201f1d !important;
+}
+@media(min-width:768px) {
+    .navbar-brand{
+        display: none;
+    }
+    .navbar-collapse{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .navbar .container-fluid{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+.navbar-toggle { float: right;margin: 0; height: 50px; width: 45px;background-color: #fd7663;border:none; border-radius: 0;z-index: 1}
+.navbar-toggle .icon-bar { width: 28px; background: #fff;transition: .5s ease;}
+.navbar-toggle.collapsed .icon-bar:nth-child(2){transform: rotate(0)translateY(0)translateX(0);}
+.navbar-toggle.collapsed .icon-bar:nth-child(3){opacity:1}
+.navbar-toggle.collapsed .icon-bar:nth-child(4){transform:rotate(0)translateY(0)translateX(0);}
+.navbar-toggle .icon-bar:nth-child(2){transform: rotate(-45deg)translateY(5px)translateX(-5px);}
+.navbar-toggle .icon-bar:nth-child(3){opacity: 0}
+.navbar-toggle .icon-bar:nth-child(4){transform:rotate(45deg)translateY(-4px)translateX(-3px);}
+/*################Navigation CSS End Here################*/ 
+.tab .nav-tabs{
+    margin: 0;
+    border-top: 1px solid #e2e2e2; /* added by nazeer */
+    /*border-left: 1px solid #e2e2e2; /* added by nazeer */
+    /*border-right: 1px solid #e2e2e2; /* added by nazeer */
+    border-bottom:none;
+   
+	
+}
+.tab .nav-tabs li a{
+    padding: 15px 10px; /* edited by nazeer */
+    margin-right: 20px;
+    font-weight: 500;
+    color: #ffffff;
+    border: none;
+	font-size:14px; /* edited by nazeer */
+    border-radius: 0;
+    background: transparent;
+    z-index: 2;
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+.tab .nav-tabs li a:hover,
+.tab .nav-tabs li.active a{ border: none; }
+.tab .nav-tabs li a:before{
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  
+}
+.tab .nav-tabs li a:hover, .tab .nav-tabs li.active a {
+   background-color: transparent;
+   color: inherit; 
+}
+
+.tab .nav-tabs li a:after{
+    content: "";
+    width: 0;
+    height: 4px;
+    background: #fd7663;
+    border: 1px solid #ff7562;
+    border-radius: 0px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+    transition: all 1s ease 0s;
+}
+.tab .nav-tabs li:hover a:after,
+.tab .nav-tabs li.active a:after{
+    width: 100%;
+    opacity: 1;
+}
+.tab .tab-content{
+    padding: 15px 20px;
+    margin-top:0px;
+    color: #333;
+    line-height: 30px;
+    background: #ffffff;
+    position: relative;
+    border: 1px solid #e2e2e2;
+}
+@media only screen and (max-width: 479px){
+    .tab .nav-tabs li{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .tab .tab-content{ margin-top: 0; }
+}
+.input-group .form-control{
+    height: 30px;
+}
+.input-group .btn{
+    padding: 0px 6px;
+}
+.input-group .btn i{
+    top:4px;
+}
+/*.modal-header {
+    padding: 10px 15px;
+}
+.modal-header .close{
+    color: #fff;
+    opacity: .95;
+}*/
+.modal-header .close {
+    color: #ffffff;
+    opacity: .85;
+}
+.modal-content {
+    border-radius: 0;
+    border: 1px solid rgb(113, 107, 100);
+}
+.modal-footer {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top:none;
+}
+.panel-title { /* added by nazeer */
+    margin-left: -1px;
+    margin-top: -1px;
+    margin-right: -1px;
+}
+.collapsed{/* added by nazeer */
+	margin-left: 1px;
+    margin-top: 1px;
+    margin-right: 1px;
+}
+.input-group-btn button{/* added by nazeer */
+	box-shadow: none;
+}
+ul.breadcrumb {
+    background-color: transparent;
+    
+}
+ul.breadcrumb li {
+    padding:9px 10px 9px 0px;
+    border: none;
+    font-size: 18px;
+}
+
+ul.breadcrumb li a {
+    color: #746d64;
+    
+ 
+} 
