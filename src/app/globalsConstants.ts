@@ -5,7 +5,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class Appconstants {
   role  = 'test';
   UserInfoDetails = null;
-  apiURL = 'http://localhost:59381/api/';
+  apiURL = 'http://qapractice-app:2121/api/';
+  // 'http://localhost:59381/api/';
   LoginFrom = '';
   ProjectDetails: any = [];
 }

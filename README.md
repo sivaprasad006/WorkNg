@@ -62,4 +62,6 @@ ng > install ngx-toastr for toast messages and animations also
 
 ng > Added some serices in the project and push to git
 
+check
+
 

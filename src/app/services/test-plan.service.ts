@@ -8,13 +8,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class TestPlanService {
 
   constructor(public http: HttpClient, public appconstants: Appconstants) { }
-  // Http Options
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-    })
-  };
+
   GetallTestPlans(prjid) {
-    return this.http.get(this.appconstants.apiURL + 'Plan/' + prjid);
+    const url = `${this.appconstants.apiURL}Plan/${prjid}`;
+    const headers =  new HttpHeaders({
+        'Content-Type': 'application/json'
+      });
+    return this.http.get(url, { headers});
   }
 }

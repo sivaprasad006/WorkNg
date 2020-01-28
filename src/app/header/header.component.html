@@ -7,18 +7,12 @@
     <div>
         <form>
             <label for="Project">Projects</label>
-            <select class="form-control">
-                <option value="">Select</option>
-                <option *ngFor="let prj of projects" value={{prj.ID_PRJ}}>
-                    {{prj.Name_PRJ}}
-                </option>
+            <select class="form-control" (change)='onProjectChange($event)'>                
+                <option *ngFor="let prj of projects" value={{prj.ID_PRJ}}>{{prj.Name_PRJ}}</option>
             </select>
             <label for="TestPlans">Test Plans</label>
-            <select class="form-control">
-                <option value="">Select</option>
-                <option *ngFor="let prj of projects" value={{prj.ID_PRJ}}>
-                    {{prj.Name_PRJ}}
-                </option>
+            <select class="form-control">                
+                <option *ngFor="let pln of TestPlanDS" value={{pln.ID_TSP}}>{{pln.Name_TSP}}</option>
             </select>
         </form>
     </div>

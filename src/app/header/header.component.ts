@@ -13,6 +13,7 @@ import { TestPlanService } from '../services/test-plan.service';
 export class HeaderComponent implements OnInit {
   projectdata: any = [];
   projects: any = [];
+  TestPlanDS: any = [];
   // tslint:disable-next-line:max-line-length
   constructor(public router: Router, public projectService: ProjectService, public testplanservice: TestPlanService, public appconstants: Appconstants) { }
 
@@ -25,13 +26,25 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/login']);
   }
   getProjects() {
+    debugger;
     this.projectdata = JSON.parse(window.sessionStorage.UserInfoDetails);
     return this.projectService.GetallProjects(this.projectdata.ProjectIDs, this.projectdata.IsAdmin).subscribe((data: {}) => {
-       this.projects = data;
-       this.appconstants.ProjectDetails = data;
+      this.projects = data;
+      this.projects.reverse();
+      this.appconstants.ProjectDetails = this.projects[0];
+      this.GetallTestPlans();
     });
   }
   GetallTestPlans() {
-    return this.testplanservice.GetallTestPlans(this.projectdata.ProjectIDs);
+    debugger;
+    return this.testplanservice.GetallTestPlans(this.appconstants.ProjectDetails.ID_PRJ).subscribe((data: {}) => {
+      this.TestPlanDS = data;
+    });
+  }
+  onProjectChange(event: any) {
+    debugger;
+    const aa = event.target.value;
+    this.appconstants.ProjectDetails.ID_PRJ = aa;
+    this.GetallTestPlans();
   }
 }
